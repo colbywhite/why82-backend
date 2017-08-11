@@ -1,0 +1,27 @@
+{
+  "name": "why82-backend",
+  "version": "2018.1.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "deploy": "sls deploy -v",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colbywhite/why82.git"
+  },
+  "author": "Colby M. White",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colbywhite/why82/issues"
+  },
+  "homepage": "https://github.com/colbywhite/why82#readme",
+  "devDependencies": {
+    "serverless": "^1.19.0"
+  },
+  "dependencies": {
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}
