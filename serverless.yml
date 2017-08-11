@@ -23,8 +23,8 @@ provider:
     MSF_USER: ${self:custom.mysportsfeeds.MSF_USER}
     MSF_PASS: ${self:custom.mysportsfeeds.MSF_PASS}
 functions:
-  hello:
-    handler: handler.hello
+  save_stats:
+    handler: handler.save_stats
     events:
     - http:
         path: hello

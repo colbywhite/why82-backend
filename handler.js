@@ -2,12 +2,12 @@
 
 const client = require('./lib/msf_client')
 
-module.exports.hello = (event, context, callback) => {
-  client.getSchedule()
-    .then((schedule) => {
+module.exports.save_stats = (event, context, callback) => {
+  client.getTeamStats()
+    .then((stats) => {
       const response = {
         statusCode: 200,
-        body: JSON.stringify(schedule)
+        body: JSON.stringify(stats)
       };
       callback(null, response);
     })
