@@ -25,4 +25,10 @@ describe('tier_calculator', () => {
     assert.strictEqual(tiers.WAS.offense.tier, 2)
     assert.strictEqual(tiers.LAL.offense.tier, 3)
   })
+
+  it('calculates point difference tiers', () => {
+    assert.strictEqual(tiers.GSW.pt_diff.tier, 1)
+    assert.strictEqual(tiers.WAS.pt_diff.tier, 2)
+    assert.strictEqual(tiers.LAL.pt_diff.tier, 3)
+  })
 })
