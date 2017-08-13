@@ -6,7 +6,7 @@
   "scripts": {
     "deploy": "sls deploy -v",
     "save_stats": "sls invoke -f save_stats -p events/save_stats.json -l",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/colbywhite/why82#readme",
   "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
     "serverless": "^1.19.0"
   },
   "dependencies": {
