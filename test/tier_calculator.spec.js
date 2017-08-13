@@ -8,6 +8,12 @@ describe('tier_calculator', () => {
     tiers = tier_calculator.calc(stats)
   })
 
+  it('keeps team information', () => {
+    assert.strictEqual(tiers.GSW.abbreviated_name, 'GSW')
+    assert.strictEqual(tiers.GSW.short_name, 'Warriors')
+    assert.strictEqual(tiers.GSW.full_name, 'Golden State Warriors')
+  })
+
   it('calculates win_loss tiers', () => {
     assert.strictEqual(tiers.GSW.win_loss.tier, 1)
     assert.strictEqual(tiers.WAS.win_loss.tier, 2)
