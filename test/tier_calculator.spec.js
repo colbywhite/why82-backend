@@ -13,4 +13,10 @@ describe('tier_calculator', () => {
     assert.strictEqual(tiers.WAS.win_loss.tier, 2)
     assert.strictEqual(tiers.LAL.win_loss.tier, 3)
   })
+
+  it('calculates offensive tiers', () => {
+    assert.strictEqual(tiers.GSW.offense.tier, 1)
+    assert.strictEqual(tiers.WAS.offense.tier, 2)
+    assert.strictEqual(tiers.LAL.offense.tier, 3)
+  })
 })
