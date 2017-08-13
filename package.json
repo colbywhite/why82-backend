@@ -5,6 +5,7 @@
   "main": "handler.js",
   "scripts": {
     "deploy": "sls deploy -v",
+    "save_stats": "sls invoke -f save_stats -p events/save_stats.json -l",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -29,11 +29,7 @@ provider:
     DATA_BUCKET: ${self:service}-${opt:stage, self:provider.stage}
 functions:
   save_stats:
-    handler: handler.save_stats
-    events:
-    - http:
-        path: hello
-        method: GET
+    handler: save_stats.save_stats
 resources:
   Resources:
     DataBucket:
