@@ -9,6 +9,8 @@ provider:
     - Effect: Allow
       Action:
         - s3:GetObject
+        - s3:PutObject
+        - s3:PutObjectAcl
       Resource:
         - Fn::Join:
           - ':'
@@ -17,11 +19,14 @@ provider:
             - s3
             - ''
             - ''
-            - Ref: DataBucket
-            - /*
+            - Fn::Join:
+              - '/'
+              - - Ref: DataBucket
+                - '*'
   environment:
     MSF_USER: ${self:custom.mysportsfeeds.MSF_USER}
     MSF_PASS: ${self:custom.mysportsfeeds.MSF_PASS}
+    DATA_BUCKET: ${self:service}-${opt:stage, self:provider.stage}
 functions:
   save_stats:
     handler: handler.save_stats
