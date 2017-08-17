@@ -15,20 +15,20 @@ describe('tier_calculator', () => {
   })
 
   it('calculates win_loss tiers', () => {
-    assert.strictEqual(tiers.GSW.win_loss.tier, 1)
-    assert.strictEqual(tiers.WAS.win_loss.tier, 2)
-    assert.strictEqual(tiers.LAL.win_loss.tier, 3)
+    assert.strictEqual(tiers.GSW.metrics.win_loss.tier, 1)
+    assert.strictEqual(tiers.WAS.metrics.win_loss.tier, 2)
+    assert.strictEqual(tiers.LAL.metrics.win_loss.tier, 3)
   })
 
   it('calculates offensive tiers', () => {
-    assert.strictEqual(tiers.GSW.offense.tier, 1)
-    assert.strictEqual(tiers.WAS.offense.tier, 2)
-    assert.strictEqual(tiers.LAL.offense.tier, 3)
+    assert.strictEqual(tiers.GSW.metrics.offense.tier, 1)
+    assert.strictEqual(tiers.WAS.metrics.offense.tier, 2)
+    assert.strictEqual(tiers.LAL.metrics.offense.tier, 3)
   })
 
   it('calculates point difference tiers', () => {
-    assert.strictEqual(tiers.GSW.pt_diff.tier, 1)
-    assert.strictEqual(tiers.WAS.pt_diff.tier, 2)
-    assert.strictEqual(tiers.LAL.pt_diff.tier, 3)
+    assert.strictEqual(tiers.GSW.metrics.pt_diff.tier, 1)
+    assert.strictEqual(tiers.WAS.metrics.pt_diff.tier, 2)
+    assert.strictEqual(tiers.LAL.metrics.pt_diff.tier, 3)
   })
 })
