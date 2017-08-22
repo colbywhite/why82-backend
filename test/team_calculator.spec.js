@@ -1,11 +1,11 @@
 const assert = require('chai').assert
 const stats = require('./resources/2017-08-13-stats')
-const tier_calculator = require('../lib/tier_calculator')
+const team_calculator = require('../lib/team_calculator')
 
-describe('tier_calculator', () => {
+describe('team_calculator', () => {
   let tiers
   before(() => {
-    tiers = tier_calculator.calc(stats)
+    tiers = team_calculator.calc(stats)
   })
 
   it('keeps team information', () => {
