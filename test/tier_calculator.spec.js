@@ -33,4 +33,10 @@ describe('tier_calculator', () => {
     assert.strictEqual(tiers.WAS.metrics.pt_diff.score, 1)
     assert.strictEqual(tiers.LAL.metrics.pt_diff.score, -3)
   })
+
+  it('calculates overall scores', () => {
+    assert.strictEqual(tiers.GSW.overall, 42)
+    assert.strictEqual(tiers.WAS.overall, 9)
+    assert.strictEqual(tiers.LAL.overall, -1)
+  })
 })
