@@ -13,8 +13,8 @@ const buildFileName = (date, postfix) => {
 
 module.exports.save_stats = (event, context, callback) => {
   const now = moment()
-  const save_stats = s3.save.bind(s3, buildFileName(now, 'stats'))
-  const save_sked = s3.save.bind(s3, buildFileName(now, 'schedule'))
+  const save_stats = s3.save_json.bind(s3, buildFileName(now, 'stats'))
+  const save_sked = s3.save_json.bind(s3, buildFileName(now, 'schedule'))
   const get_sked = client.getMultiDaySchedule.bind(client, now, 8)
   let stats = undefined
   let sked = undefined
@@ -23,14 +23,12 @@ module.exports.save_stats = (event, context, callback) => {
       stats = results
       return stats
     })
-    .then(JSON.stringify)
     .then(save_stats)
     .then(get_sked)
     .then((results) => {
       sked = results
       return sked
     })
-    .then(JSON.stringify)
     .then(save_sked)
     .then(() => {
       const response = {
