@@ -16,7 +16,7 @@ const buildFileName = (season, date, postfix) => {
 }
 
 module.exports.save_stats = (event, context, callback) => {
-  const now = moment('20170216', "YYYYMMDD")
+  const now = moment.tz('20170216', 'YYYYMMDD', 'America/New_York')
   const save_stats = s3.save_json.bind(s3, buildFileName(SEASON, now, 'raw.stats'))
   const save_sked = s3.save_json.bind(s3, buildFileName(SEASON, now, 'raw.schedule'))
   const save_team_scores = s3.save_json.bind(s3, buildFileName(SEASON, now, 'team.scores'))
