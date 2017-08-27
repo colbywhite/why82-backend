@@ -6,7 +6,7 @@ cache:
   directories:
   - node_modules
 before_deploy:
-  - npm install -g serverless@^1.19.0
+- npm install -g serverless@^1.19.0
 deploy:
   provider: script
   script: npm run deploy -- --stage prod
@@ -15,3 +15,6 @@ deploy:
 notifications:
   slack:
     secure: IAHR9JQFeGmNcVh7sy0oaTxkqVhJlsuuClK6VnYOCtTnneF+fT3ImIi85x8vTLa5buJr2zcnImBVOOSbCNseogR3FWU8G0jRJ8zrrqMHpn2F+YIOoXSdxzh1sKZjcYw6miQFlyt7nohgIxkA5GQYlksByKDv8ytLKqZNB4oQK6WPryUoMBTW9ataq0Anf393nJLqxMTYn3YtYVnCVPelxpUwOhgM8SHG7Dm7QtvNleCkVi2v0oj14OuQueqcjt80C7cGVp5/XnvuAVlMhOkstZV3XvgOrYrAJlo2SpyIs8yjIlRmvaMKVR5XFjejFnVnVF27eduvGR2fGzJEoTCRNtjeRBUd5ZVlGfXxgWx3NIKwaJgGY5Ti1IoPtNBWt4pQHVU7KN8LvaOlTlpihV8VDlT32NzimVkJ4aFaYB0uY3IXOTrNDxedaCnVl6+jUJO2NCPdiZx/2tID2mOcDAHMXbmvjBxP1gPpzWo3gjLEyqbbL+IpFbu3YwZmXcZiDlwc8XZVDbeLfxR644K2RTd+3Y5rkZFuhuZLabN/w2rZhfJDQEDlLzwa81syOVu+JAw+epAwgHF6Ni1rlFiHyYYqlp2f1pahVlHx7h+Ef+YBT5KB0IF9c5ExiSV4G5Y2o2k2OwKE1QEbaAjJmGKjlJ9yY7Mx5hV0/1VIYy6IPRSI0JU=
+before_install:
+- openssl aes-256-cbc -K $encrypted_27ba3e3449f5_key -iv $encrypted_27ba3e3449f5_iv
+  -in .mysportsfeeds.yml.enc -out ./.mysportsfeeds.yml -d
