@@ -5,20 +5,22 @@ const s3 = require('./lib/s3_client')
 const team_calc = require('./lib/team_calculator')
 const game_calc = require('./lib/game_calculator')
 const moment = require('moment-timezone')
+const SEASON = parseInt(process.env.SEASON)
 
-const buildFileName = (date, postfix) => {
+const buildFileName = (season, date, postfix) => {
   if(!date) {
     date = moment()
   }
-  return moment(date).tz('America/New_York').format(`YYYYMMDD.[${postfix}.json]`)
+  const filename = moment(date).tz('America/New_York').format(`YYYYMMDD.[${postfix}.json]`)
+  return `${season}/${filename}`
 }
 
 module.exports.save_stats = (event, context, callback) => {
   const now = moment('20170216', "YYYYMMDD")
-  const save_stats = s3.save_json.bind(s3, buildFileName(now, 'raw.stats'))
-  const save_sked = s3.save_json.bind(s3, buildFileName(now, 'raw.schedule'))
-  const save_team_scores = s3.save_json.bind(s3, buildFileName(now, 'team.scores'))
-  const save_game_scores = s3.save_json.bind(s3, buildFileName(now, 'game.scores'))
+  const save_stats = s3.save_json.bind(s3, buildFileName(SEASON, now, 'raw.stats'))
+  const save_sked = s3.save_json.bind(s3, buildFileName(SEASON, now, 'raw.schedule'))
+  const save_team_scores = s3.save_json.bind(s3, buildFileName(SEASON, now, 'team.scores'))
+  const save_game_scores = s3.save_json.bind(s3, buildFileName(SEASON, now, 'game.scores'))
   const get_sked = client.getMultiDaySchedule.bind(client, now, 8)
   let getTeamScores = client.getTeamStats()
     .then(save_stats)

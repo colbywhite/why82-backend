@@ -24,6 +24,7 @@ provider:
               - - Ref: DataBucket
                 - '*'
   environment:
+    SEASON: 2017
     MSF_USER: ${self:custom.mysportsfeeds.MSF_USER}
     MSF_PASS: ${self:custom.mysportsfeeds.MSF_PASS}
     DATA_BUCKET: ${self:service}-${opt:stage, self:provider.stage}
