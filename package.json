@@ -4,8 +4,8 @@
   "description": "",
   "main": "handler.js",
   "scripts": {
-    "deploy": "sls deploy -v",
-    "save_stats": "sls invoke -f save_stats -p events/save_stats.json -l",
+    "deploy": "serverless deploy -v",
+    "save_stats": "serverless invoke -f save_stats -p events/save_stats.json -l",
     "test:watch": "mocha -w",
     "test": "mocha"
   },
