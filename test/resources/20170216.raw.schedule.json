@@ -192,5 +192,54 @@
       "Abbreviation": "SAC"
     },
     "location": "Sleep Train Arena"
+  }],
+  "2017-02-24": [
+  {
+    "id": "34795",
+    "scheduleStatus": "Normal",
+    "originalDate": null,
+    "originalTime": null,
+    "delayedOrPostponedReason": null,
+    "date": "2017-02-24",
+    "time": "10:30PM",
+    "awayTeam":
+    {
+      "ID": "99",
+      "City": "Toronto",
+      "Name": "Raptors",
+      "Abbreviation": "TOR"
+    },
+    "homeTeam":
+    {
+      "ID": "103",
+      "City": "Oklahoma City",
+      "Name": "Thunder",
+      "Abbreviation": "OKL"
+    },
+    "location": "Sleep Train Arena"
+  },
+  {
+    "id": "34795",
+    "scheduleStatus": "Normal",
+    "originalDate": null,
+    "originalTime": null,
+    "delayedOrPostponedReason": null,
+    "date": "2017-02-24",
+    "time": "10:30PM",
+    "awayTeam":
+    {
+      "ID": "99",
+      "City": "Toronto",
+      "Name": "Raptors",
+      "Abbreviation": "TOR"
+    },
+    "homeTeam":
+    {
+      "ID": "103",
+      "City": "Golden State",
+      "Name": "Warriors",
+      "Abbreviation": "GSW"
+    },
+    "location": "Sleep Train Arena"
   }]
 }
