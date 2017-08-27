@@ -54,6 +54,17 @@ functions:
           parameters:
             paths:
               name: true
+  latest_teams:
+    handler: latest.teams
+    events:
+    - http:
+        path: '{season}/teams'
+        method: GET
+        cors: true
+        request:
+          parameters:
+            paths:
+              name: true
 resources:
   Resources:
     DataBucket:
