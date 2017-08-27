@@ -8,6 +8,18 @@ provider:
   iamRoleStatements:
     - Effect: Allow
       Action:
+        - s3:ListBucket
+      Resource:
+        - Fn::Join:
+          - ':'
+          - - arn
+            - aws
+            - s3
+            - ''
+            - ''
+            - Ref: DataBucket
+    - Effect: Allow
+      Action:
         - s3:GetObject
         - s3:PutObject
         - s3:PutObjectAcl
@@ -31,6 +43,17 @@ provider:
 functions:
   save_stats:
     handler: save_stats.save_stats
+  latest_schedule:
+    handler: latest.schedule
+    events:
+    - http:
+        path: '{season}/schedule'
+        method: GET
+        cors: true
+        request:
+          parameters:
+            paths:
+              name: true
 resources:
   Resources:
     DataBucket:
