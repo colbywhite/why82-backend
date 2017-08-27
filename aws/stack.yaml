@@ -1,0 +1,98 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'CI creds for project'
+Parameters:
+  ProjectName:
+    Description: Name of project
+    Type: String
+Resources:
+  CiUser:
+    Type: AWS::IAM::User
+    Properties:
+      Policies:
+        - PolicyName:
+            Fn::Join:
+              - '-'
+              -
+                - Ref: ProjectName
+                - cipolicy
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Resource: '*'
+                Action:
+                  - 'cloudformation:Describe*'
+                  - 'cloudformation:List*'
+                  - 'cloudformation:Get*'
+                  - 'cloudformation:PreviewStackUpdate'
+                  - 'lambda:Get*'
+                  - 'lambda:List*'
+                  - 'ec2:DescribeSecurityGroups'
+                  - 'ec2:DescribeSubnets'
+                  - 's3:GetObject'
+                  - 's3:List*'
+                  - 'apigateway:GET'
+                  - 'iam:List*'
+                  - 'iam:Get*'
+                  - 'iam:Simulate*'
+                  - 'kinesis:Describe*'
+                  - 'kinesis:List*'
+                  - 'dynamodb:Describe*'
+                  - 'dynamodb:List*'
+                  - 'sqs:List*'
+              - Effect: Allow
+                Resource: '*'
+                Action:
+                  - lambda:CreateFunction
+              - Effect: Allow
+                Action: iam:PassRole
+                Resource:
+                  Fn::Join:
+                    - ':'
+                    - - arn
+                      - aws
+                      - iam
+                      - ''
+                      - Ref: 'AWS::AccountId'
+                      - Fn::Join:
+                        - '/'
+                        - - role
+                          - Fn::Join:
+                            - '-'
+                            -
+                              - Ref: ProjectName
+                              - 'prod*'
+              - Effect: Allow
+                Action: lambda:*
+                Resource:
+                  Fn::Join:
+                    - ':'
+                    - - arn
+                      - aws
+                      - lambda
+                      - Ref: 'AWS::Region'
+                      - Ref: 'AWS::AccountId'
+                      - function
+                      - Fn::Join:
+                        - '-'
+                        - - Ref: ProjectName
+                          - 'prod*'
+  CiKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName:
+        Ref: CiUser
+Outputs:
+  CiUser:
+    Description: The user CI will use to do releases
+    Value:
+      Ref: CiUser
+  CiAccessKey:
+    Description: The CI user's access key
+    Value:
+      Ref: CiKey
+  CiSecretKey:
+    Description: The CI user's secret key
+    Value:
+      Fn::GetAtt:
+        - CiKey
+        - SecretAccessKey
