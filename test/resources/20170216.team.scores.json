@@ -1,0 +1,872 @@
+{
+  "GSW":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 8,
+        "WinPct": 0.817,
+        "Wins": 67,
+        "Losses": 15
+      },
+      "offense":
+      {
+        "score": 21,
+        "PtsPerGame": 115.9
+      },
+      "pt_diff":
+      {
+        "score": 13,
+        "PtsPerGame": 115.9,
+        "PtsAgainstPerGame": 104.3,
+        "PtsDiffPerGame": 11.600000000000009
+      }
+    },
+    "score": 42,
+    "abbreviated_name": "GSW",
+    "short_name": "Warriors",
+    "full_name": "Golden State Warriors"
+  },
+  "SAS":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 5,
+        "WinPct": 0.744,
+        "Wins": 61,
+        "Losses": 21
+      },
+      "offense":
+      {
+        "score": 2,
+        "PtsPerGame": 105.3
+      },
+      "pt_diff":
+      {
+        "score": 5,
+        "PtsPerGame": 105.3,
+        "PtsAgainstPerGame": 98.1,
+        "PtsDiffPerGame": 7.200000000000003
+      }
+    },
+    "score": 12,
+    "abbreviated_name": "SAS",
+    "short_name": "Spurs",
+    "full_name": "San Antonio Spurs"
+  },
+  "HOU":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 5,
+        "WinPct": 0.671,
+        "Wins": 55,
+        "Losses": 27
+      },
+      "offense":
+      {
+        "score": 21,
+        "PtsPerGame": 115.3
+      },
+      "pt_diff":
+      {
+        "score": 3,
+        "PtsPerGame": 115.3,
+        "PtsAgainstPerGame": 109.6,
+        "PtsDiffPerGame": 5.700000000000003
+      }
+    },
+    "score": 29,
+    "abbreviated_name": "HOU",
+    "short_name": "Rockets",
+    "full_name": "Houston Rockets"
+  },
+  "BOS":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 3,
+        "WinPct": 0.646,
+        "Wins": 53,
+        "Losses": 29
+      },
+      "offense":
+      {
+        "score": 5,
+        "PtsPerGame": 108
+      },
+      "pt_diff":
+      {
+        "score": 2,
+        "PtsPerGame": 108,
+        "PtsAgainstPerGame": 105.4,
+        "PtsDiffPerGame": 2.5999999999999943
+      }
+    },
+    "score": 10,
+    "abbreviated_name": "BOS",
+    "short_name": "Celtics",
+    "full_name": "Boston Celtics"
+  },
+  "LAC":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 3,
+        "WinPct": 0.622,
+        "Wins": 51,
+        "Losses": 31
+      },
+      "offense":
+      {
+        "score": 5,
+        "PtsPerGame": 108.7
+      },
+      "pt_diff":
+      {
+        "score": 3,
+        "PtsPerGame": 108.7,
+        "PtsAgainstPerGame": 104.4,
+        "PtsDiffPerGame": 4.299999999999997
+      }
+    },
+    "score": 11,
+    "abbreviated_name": "LAC",
+    "short_name": "Clippers",
+    "full_name": "Los Angeles Clippers"
+  },
+  "TOR":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 3,
+        "WinPct": 0.622,
+        "Wins": 51,
+        "Losses": 31
+      },
+      "offense":
+      {
+        "score": 3,
+        "PtsPerGame": 106.9
+      },
+      "pt_diff":
+      {
+        "score": 3,
+        "PtsPerGame": 106.9,
+        "PtsAgainstPerGame": 102.6,
+        "PtsDiffPerGame": 4.300000000000011
+      }
+    },
+    "score": 9,
+    "abbreviated_name": "TOR",
+    "short_name": "Raptors",
+    "full_name": "Toronto Raptors"
+  },
+  "UTA":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 3,
+        "WinPct": 0.622,
+        "Wins": 51,
+        "Losses": 31
+      },
+      "offense":
+      {
+        "score": 0,
+        "PtsPerGame": 100.7
+      },
+      "pt_diff":
+      {
+        "score": 2,
+        "PtsPerGame": 100.7,
+        "PtsAgainstPerGame": 96.8,
+        "PtsDiffPerGame": 3.9000000000000057
+      }
+    },
+    "score": 5,
+    "abbreviated_name": "UTA",
+    "short_name": "Jazz",
+    "full_name": "Utah Jazz"
+  },
+  "CLE":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 3,
+        "WinPct": 0.622,
+        "Wins": 51,
+        "Losses": 31
+      },
+      "offense":
+      {
+        "score": 8,
+        "PtsPerGame": 110.3
+      },
+      "pt_diff":
+      {
+        "score": 2,
+        "PtsPerGame": 110.3,
+        "PtsAgainstPerGame": 107.2,
+        "PtsDiffPerGame": 3.0999999999999943
+      }
+    },
+    "score": 13,
+    "abbreviated_name": "CLE",
+    "short_name": "Cavaliers",
+    "full_name": "Cleveland Cavaliers"
+  },
+  "WAS":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 3,
+        "WinPct": 0.598,
+        "Wins": 49,
+        "Losses": 33
+      },
+      "offense":
+      {
+        "score": 5,
+        "PtsPerGame": 109.2
+      },
+      "pt_diff":
+      {
+        "score": 1,
+        "PtsPerGame": 109.2,
+        "PtsAgainstPerGame": 107.4,
+        "PtsDiffPerGame": 1.7999999999999972
+      }
+    },
+    "score": 9,
+    "abbreviated_name": "WAS",
+    "short_name": "Wizards",
+    "full_name": "Washington Wizards"
+  },
+  "OKL":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 3,
+        "WinPct": 0.573,
+        "Wins": 47,
+        "Losses": 35
+      },
+      "offense":
+      {
+        "score": 3,
+        "PtsPerGame": 106.6
+      },
+      "pt_diff":
+      {
+        "score": 1,
+        "PtsPerGame": 106.6,
+        "PtsAgainstPerGame": 105.8,
+        "PtsDiffPerGame": 0.7999999999999972
+      }
+    },
+    "score": 7,
+    "abbreviated_name": "OKL",
+    "short_name": "Thunder",
+    "full_name": "Oklahoma City Thunder"
+  },
+  "MEM":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 2,
+        "WinPct": 0.524,
+        "Wins": 43,
+        "Losses": 39
+      },
+      "offense":
+      {
+        "score": 0,
+        "PtsPerGame": 100.5
+      },
+      "pt_diff":
+      {
+        "score": 1,
+        "PtsPerGame": 100.5,
+        "PtsAgainstPerGame": 100,
+        "PtsDiffPerGame": 0.5
+      }
+    },
+    "score": 3,
+    "abbreviated_name": "MEM",
+    "short_name": "Grizzlies",
+    "full_name": "Memphis Grizzlies"
+  },
+  "ATL":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 2,
+        "WinPct": 0.524,
+        "Wins": 43,
+        "Losses": 39
+      },
+      "offense":
+      {
+        "score": 1,
+        "PtsPerGame": 103.2
+      },
+      "pt_diff":
+      {
+        "score": 0,
+        "PtsPerGame": 103.2,
+        "PtsAgainstPerGame": 104,
+        "PtsDiffPerGame": -0.7999999999999972
+      }
+    },
+    "score": 3,
+    "abbreviated_name": "ATL",
+    "short_name": "Hawks",
+    "full_name": "Atlanta Hawks"
+  },
+  "MIL":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 2,
+        "WinPct": 0.512,
+        "Wins": 42,
+        "Losses": 40
+      },
+      "offense":
+      {
+        "score": 1,
+        "PtsPerGame": 103.6
+      },
+      "pt_diff":
+      {
+        "score": 0,
+        "PtsPerGame": 103.6,
+        "PtsAgainstPerGame": 103.8,
+        "PtsDiffPerGame": -0.20000000000000284
+      }
+    },
+    "score": 3,
+    "abbreviated_name": "MIL",
+    "short_name": "Bucks",
+    "full_name": "Milwaukee Bucks"
+  },
+  "IND":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 2,
+        "WinPct": 0.512,
+        "Wins": 42,
+        "Losses": 40
+      },
+      "offense":
+      {
+        "score": 2,
+        "PtsPerGame": 105.1
+      },
+      "pt_diff":
+      {
+        "score": 0,
+        "PtsPerGame": 105.1,
+        "PtsAgainstPerGame": 105.3,
+        "PtsDiffPerGame": -0.20000000000000284
+      }
+    },
+    "score": 4,
+    "abbreviated_name": "IND",
+    "short_name": "Pacers",
+    "full_name": "Indiana Pacers"
+  },
+  "MIA":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 2,
+        "WinPct": 0.5,
+        "Wins": 41,
+        "Losses": 41
+      },
+      "offense":
+      {
+        "score": 1,
+        "PtsPerGame": 103.2
+      },
+      "pt_diff":
+      {
+        "score": 1,
+        "PtsPerGame": 103.2,
+        "PtsAgainstPerGame": 102.1,
+        "PtsDiffPerGame": 1.1000000000000085
+      }
+    },
+    "score": 4,
+    "abbreviated_name": "MIA",
+    "short_name": "Heat",
+    "full_name": "Miami Heat"
+  },
+  "CHI":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 2,
+        "WinPct": 0.5,
+        "Wins": 41,
+        "Losses": 41
+      },
+      "offense":
+      {
+        "score": 1,
+        "PtsPerGame": 102.9
+      },
+      "pt_diff":
+      {
+        "score": 1,
+        "PtsPerGame": 102.9,
+        "PtsAgainstPerGame": 102.4,
+        "PtsDiffPerGame": 0.5
+      }
+    },
+    "score": 4,
+    "abbreviated_name": "CHI",
+    "short_name": "Bulls",
+    "full_name": "Chicago Bulls"
+  },
+  "POR":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 2,
+        "WinPct": 0.5,
+        "Wins": 41,
+        "Losses": 41
+      },
+      "offense":
+      {
+        "score": 3,
+        "PtsPerGame": 107.9
+      },
+      "pt_diff":
+      {
+        "score": 0,
+        "PtsPerGame": 107.9,
+        "PtsAgainstPerGame": 108.5,
+        "PtsDiffPerGame": -0.5999999999999943
+      }
+    },
+    "score": 5,
+    "abbreviated_name": "POR",
+    "short_name": "Trail Blazers",
+    "full_name": "Portland Trail Blazers"
+  },
+  "DEN":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 2,
+        "WinPct": 0.488,
+        "Wins": 40,
+        "Losses": 42
+      },
+      "offense":
+      {
+        "score": 8,
+        "PtsPerGame": 111.7
+      },
+      "pt_diff":
+      {
+        "score": 1,
+        "PtsPerGame": 111.7,
+        "PtsAgainstPerGame": 111.2,
+        "PtsDiffPerGame": 0.5
+      }
+    },
+    "score": 11,
+    "abbreviated_name": "DEN",
+    "short_name": "Nuggets",
+    "full_name": "Denver Nuggets"
+  },
+  "DET":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 2,
+        "WinPct": 0.451,
+        "Wins": 37,
+        "Losses": 45
+      },
+      "offense":
+      {
+        "score": 0,
+        "PtsPerGame": 101.3
+      },
+      "pt_diff":
+      {
+        "score": 0,
+        "PtsPerGame": 101.3,
+        "PtsAgainstPerGame": 102.5,
+        "PtsDiffPerGame": -1.2000000000000028
+      }
+    },
+    "score": 2,
+    "abbreviated_name": "DET",
+    "short_name": "Pistons",
+    "full_name": "Detroit Pistons"
+  },
+  "CHA":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 1,
+        "WinPct": 0.439,
+        "Wins": 36,
+        "Losses": 46
+      },
+      "offense":
+      {
+        "score": 2,
+        "PtsPerGame": 104.9
+      },
+      "pt_diff":
+      {
+        "score": 1,
+        "PtsPerGame": 104.9,
+        "PtsAgainstPerGame": 104.7,
+        "PtsDiffPerGame": 0.20000000000000284
+      }
+    },
+    "score": 4,
+    "abbreviated_name": "CHA",
+    "short_name": "Hornets",
+    "full_name": "Charlotte Hornets"
+  },
+  "NOP":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 1,
+        "WinPct": 0.415,
+        "Wins": 34,
+        "Losses": 48
+      },
+      "offense":
+      {
+        "score": 2,
+        "PtsPerGame": 104.3
+      },
+      "pt_diff":
+      {
+        "score": -1,
+        "PtsPerGame": 104.3,
+        "PtsAgainstPerGame": 106.4,
+        "PtsDiffPerGame": -2.1000000000000085
+      }
+    },
+    "score": 2,
+    "abbreviated_name": "NOP",
+    "short_name": "Pelicans",
+    "full_name": "New Orleans Pelicans"
+  },
+  "DAL":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 1,
+        "WinPct": 0.402,
+        "Wins": 33,
+        "Losses": 49
+      },
+      "offense":
+      {
+        "score": -2,
+        "PtsPerGame": 97.9
+      },
+      "pt_diff":
+      {
+        "score": -1,
+        "PtsPerGame": 97.9,
+        "PtsAgainstPerGame": 100.8,
+        "PtsDiffPerGame": -2.8999999999999915
+      }
+    },
+    "score": -2,
+    "abbreviated_name": "DAL",
+    "short_name": "Mavericks",
+    "full_name": "Dallas Mavericks"
+  },
+  "SAC":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 1,
+        "WinPct": 0.39,
+        "Wins": 32,
+        "Losses": 50
+      },
+      "offense":
+      {
+        "score": 1,
+        "PtsPerGame": 102.8
+      },
+      "pt_diff":
+      {
+        "score": -1,
+        "PtsPerGame": 102.8,
+        "PtsAgainstPerGame": 106.7,
+        "PtsDiffPerGame": -3.9000000000000057
+      }
+    },
+    "score": 1,
+    "abbreviated_name": "SAC",
+    "short_name": "Kings",
+    "full_name": "Sacramento Kings"
+  },
+  "MIN":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 1,
+        "WinPct": 0.378,
+        "Wins": 31,
+        "Losses": 51
+      },
+      "offense":
+      {
+        "score": 2,
+        "PtsPerGame": 105.6
+      },
+      "pt_diff":
+      {
+        "score": 0,
+        "PtsPerGame": 105.6,
+        "PtsAgainstPerGame": 106.7,
+        "PtsDiffPerGame": -1.1000000000000085
+      }
+    },
+    "score": 3,
+    "abbreviated_name": "MIN",
+    "short_name": "Timberwolves",
+    "full_name": "Minnesota Timberwolves"
+  },
+  "NYK":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 1,
+        "WinPct": 0.378,
+        "Wins": 31,
+        "Losses": 51
+      },
+      "offense":
+      {
+        "score": 2,
+        "PtsPerGame": 104.3
+      },
+      "pt_diff":
+      {
+        "score": -1,
+        "PtsPerGame": 104.3,
+        "PtsAgainstPerGame": 108,
+        "PtsDiffPerGame": -3.700000000000003
+      }
+    },
+    "score": 2,
+    "abbreviated_name": "NYK",
+    "short_name": "Knicks",
+    "full_name": "New York Knicks"
+  },
+  "ORL":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 1,
+        "WinPct": 0.354,
+        "Wins": 29,
+        "Losses": 53
+      },
+      "offense":
+      {
+        "score": 0,
+        "PtsPerGame": 101.1
+      },
+      "pt_diff":
+      {
+        "score": -3,
+        "PtsPerGame": 101.1,
+        "PtsAgainstPerGame": 107.6,
+        "PtsDiffPerGame": -6.5
+      }
+    },
+    "score": -2,
+    "abbreviated_name": "ORL",
+    "short_name": "Magic",
+    "full_name": "Orlando Magic"
+  },
+  "PHI":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 0,
+        "WinPct": 0.341,
+        "Wins": 28,
+        "Losses": 54
+      },
+      "offense":
+      {
+        "score": 1,
+        "PtsPerGame": 102.4
+      },
+      "pt_diff":
+      {
+        "score": -2,
+        "PtsPerGame": 102.4,
+        "PtsAgainstPerGame": 108.1,
+        "PtsDiffPerGame": -5.699999999999989
+      }
+    },
+    "score": -1,
+    "abbreviated_name": "PHI",
+    "short_name": "76ers",
+    "full_name": "Philadelphia 76ers"
+  },
+  "LAL":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 0,
+        "WinPct": 0.317,
+        "Wins": 26,
+        "Losses": 56
+      },
+      "offense":
+      {
+        "score": 2,
+        "PtsPerGame": 104.6
+      },
+      "pt_diff":
+      {
+        "score": -3,
+        "PtsPerGame": 104.6,
+        "PtsAgainstPerGame": 111.5,
+        "PtsDiffPerGame": -6.900000000000006
+      }
+    },
+    "score": -1,
+    "abbreviated_name": "LAL",
+    "short_name": "Lakers",
+    "full_name": "Los Angeles Lakers"
+  },
+  "PHX":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": 0,
+        "WinPct": 0.293,
+        "Wins": 24,
+        "Losses": 58
+      },
+      "offense":
+      {
+        "score": 3,
+        "PtsPerGame": 107.7
+      },
+      "pt_diff":
+      {
+        "score": -2,
+        "PtsPerGame": 107.7,
+        "PtsAgainstPerGame": 113.3,
+        "PtsDiffPerGame": -5.599999999999994
+      }
+    },
+    "score": 1,
+    "abbreviated_name": "PHX",
+    "short_name": "Suns",
+    "full_name": "Phoenix Suns"
+  },
+  "BRO":
+  {
+    "metrics":
+    {
+      "win_loss":
+      {
+        "score": -1,
+        "WinPct": 0.244,
+        "Wins": 20,
+        "Losses": 62
+      },
+      "offense":
+      {
+        "score": 2,
+        "PtsPerGame": 105.8
+      },
+      "pt_diff":
+      {
+        "score": -3,
+        "PtsPerGame": 105.8,
+        "PtsAgainstPerGame": 112.5,
+        "PtsDiffPerGame": -6.700000000000003
+      }
+    },
+    "score": -2,
+    "abbreviated_name": "BRO",
+    "short_name": "Nets",
+    "full_name": "Brooklyn Nets"
+  }
+}

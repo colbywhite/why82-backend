@@ -1,0 +1,196 @@
+{
+  "2017-02-16": [
+  {
+    "id": "34788",
+    "scheduleStatus": "Normal",
+    "originalDate": null,
+    "originalTime": null,
+    "delayedOrPostponedReason": null,
+    "date": "2017-02-16",
+    "time": "7:00PM",
+    "awayTeam":
+    {
+      "ID": "94",
+      "City": "Washington",
+      "Name": "Wizards",
+      "Abbreviation": "WAS"
+    },
+    "homeTeam":
+    {
+      "ID": "87",
+      "City": "Indiana",
+      "Name": "Pacers",
+      "Abbreviation": "IND"
+    },
+    "location": "Bankers Life Fieldhouse"
+  },
+  {
+    "id": "34789",
+    "scheduleStatus": "Normal",
+    "originalDate": null,
+    "originalTime": null,
+    "delayedOrPostponedReason": null,
+    "date": "2017-02-16",
+    "time": "8:00PM",
+    "awayTeam":
+    {
+      "ID": "82",
+      "City": "Boston",
+      "Name": "Celtics",
+      "Abbreviation": "BOS"
+    },
+    "homeTeam":
+    {
+      "ID": "89",
+      "City": "Chicago",
+      "Name": "Bulls",
+      "Abbreviation": "CHI"
+    },
+    "location": "United Center"
+  }],
+  "2017-02-23": [
+  {
+    "id": "34790",
+    "scheduleStatus": "Normal",
+    "originalDate": null,
+    "originalTime": null,
+    "delayedOrPostponedReason": null,
+    "date": "2017-02-23",
+    "time": "7:00PM",
+    "awayTeam":
+    {
+      "ID": "97",
+      "City": "Portland",
+      "Name": "Trail Blazers",
+      "Abbreviation": "POR"
+    },
+    "homeTeam":
+    {
+      "ID": "95",
+      "City": "Orlando",
+      "Name": "Magic",
+      "Abbreviation": "ORL"
+    },
+    "location": "Amway Center"
+  },
+  {
+    "id": "34791",
+    "scheduleStatus": "Normal",
+    "originalDate": null,
+    "originalTime": null,
+    "delayedOrPostponedReason": null,
+    "date": "2017-02-23",
+    "time": "7:30PM",
+    "awayTeam":
+    {
+      "ID": "93",
+      "City": "Charlotte",
+      "Name": "Hornets",
+      "Abbreviation": "CHA"
+    },
+    "homeTeam":
+    {
+      "ID": "88",
+      "City": "Detroit",
+      "Name": "Pistons",
+      "Abbreviation": "DET"
+    },
+    "location": "Palace of Auburn Hills"
+  },
+  {
+    "id": "34792",
+    "scheduleStatus": "Normal",
+    "originalDate": null,
+    "originalTime": null,
+    "delayedOrPostponedReason": null,
+    "date": "2017-02-23",
+    "time": "8:00PM",
+    "awayTeam":
+    {
+      "ID": "109",
+      "City": "Houston",
+      "Name": "Rockets",
+      "Abbreviation": "HOU"
+    },
+    "homeTeam":
+    {
+      "ID": "110",
+      "City": "New Orleans",
+      "Name": "Pelicans",
+      "Abbreviation": "NOP"
+    },
+    "location": "Smoothie King Center"
+  },
+  {
+    "id": "34793",
+    "scheduleStatus": "Normal",
+    "originalDate": null,
+    "originalTime": null,
+    "delayedOrPostponedReason": null,
+    "date": "2017-02-23",
+    "time": "8:00PM",
+    "awayTeam":
+    {
+      "ID": "83",
+      "City": "New York",
+      "Name": "Knicks",
+      "Abbreviation": "NYK"
+    },
+    "homeTeam":
+    {
+      "ID": "86",
+      "City": "Cleveland",
+      "Name": "Cavaliers",
+      "Abbreviation": "CLE"
+    },
+    "location": "Quicken Loans Arena"
+  },
+  {
+    "id": "34794",
+    "scheduleStatus": "Normal",
+    "originalDate": null,
+    "originalTime": null,
+    "delayedOrPostponedReason": null,
+    "date": "2017-02-23",
+    "time": "10:30PM",
+    "awayTeam":
+    {
+      "ID": "102",
+      "City": "Los Angeles",
+      "Name": "Clippers",
+      "Abbreviation": "LAC"
+    },
+    "homeTeam":
+    {
+      "ID": "101",
+      "City": "Golden State",
+      "Name": "Warriors",
+      "Abbreviation": "GSW"
+    },
+    "location": "Oracle Arena"
+  },
+  {
+    "id": "34795",
+    "scheduleStatus": "Normal",
+    "originalDate": null,
+    "originalTime": null,
+    "delayedOrPostponedReason": null,
+    "date": "2017-02-23",
+    "time": "10:30PM",
+    "awayTeam":
+    {
+      "ID": "99",
+      "City": "Denver",
+      "Name": "Nuggets",
+      "Abbreviation": "DEN"
+    },
+    "homeTeam":
+    {
+      "ID": "103",
+      "City": "Sacramento",
+      "Name": "Kings",
+      "Abbreviation": "SAC"
+    },
+    "location": "Sleep Train Arena"
+  }]
+}
