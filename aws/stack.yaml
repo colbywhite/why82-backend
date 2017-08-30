@@ -4,96 +4,153 @@ Parameters:
   ProjectName:
     Description: Name of project
     Type: String
+  Stage:
+    Description: Stage to allow permissions for
+    Type: String
+    Default: '*'
 Resources:
+  ServelessDeployCFPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action: 'cloudformation:ValidateTemplate'
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - 'cloudformation:DescribeStacks'
+              - 'cloudformation:DescribeStackResource'
+              - 'cloudformation:DescribeStackResources'
+              - 'cloudformation:DescribeStackEvents'
+              - 'cloudformation:List*'
+              - 'cloudformation:Get*'
+              - 'cloudformation:PreviewStackUpdate'
+              - 'cloudformation:UpdateStack'
+              - 'cloudformation:CreateStack'
+            Resource:
+              - !Sub 'arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${ProjectName}-${Stage}/*'
+  ServelessDeployS3Policy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - 's3:Get*'
+              - 's3:List*'
+              - 's3:CreateBucket'
+            Resource:
+              - !Sub 'arn:aws:s3:::${ProjectName}-${Stage}-serverlessdeploymentbucket-*'
+
+          - Effect: Allow
+            Action:
+              - 's3:*'
+            Resource:
+              - !Sub 'arn:aws:s3:::${ProjectName}-${Stage}-serverlessdeploymentbucket-*/*'
+  ServelessDeployLogsPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'logs:DescribeLogGroups'
+            Resource:
+              - !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group::log-stream:*'
+          - Effect: Allow
+            Action:
+              - 'logs:CreateLogGroup'
+              - 'logs:CreateLogStream'
+              - 'logs:DeleteLogGroup'
+              - 'logs:DeleteLogStream'
+              - 'logs:DescribeLogStreams'
+              - 'logs:FilterLogEvents'
+            Resource:
+              - !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/${ProjectName}-${Stage}-*:log-stream:*'
+  ServelessDeployIAMPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'iam:GetRole'
+              - 'iam:PassRole'
+              - 'iam:CreateRole'
+              - 'iam:DeleteRole'
+              - 'iam:DetachRolePolicy'
+              - 'iam:PutRolePolicy'
+              - 'iam:AttachRolePolicy'
+              - 'iam:DeleteRolePolicy'
+            Resource:
+              - !Sub 'arn:aws:iam::${AWS::AccountId}:role/${ProjectName}-${Stage}-${AWS::Region}-lambdaRole'
+  ServelessDeployLambdaPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'apigateway:GET'
+              - 'apigateway:POST'
+              - 'apigateway:PUT'
+              - 'apigateway:DELETE'
+            Resource:
+              - !Sub 'arn:aws:apigateway:${AWS::Region}::/restapis'
+          - Effect: Allow
+            Action:
+              - 'apigateway:GET'
+              - 'apigateway:POST'
+              - 'apigateway:PUT'
+              - 'apigateway:DELETE'
+            Resource:
+              - !Sub 'arn:aws:apigateway:${AWS::Region}::/restapis/*'
+          - Effect: Allow
+            Action:
+              - 'lambda:*'
+            Resource:
+              - !Sub 'arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${ProjectName}-${Stage}-*'
+          - Effect: Allow
+            Action:
+              - 'ec2:DescribeSecurityGroups'
+              - 'ec2:DescribeSubnets'
+              - 'ec2:DescribeVpcs'
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - 'events:Put*'
+              - 'events:Remove*'
+              - 'events:Delete*'
+              - 'events:Describe*'
+            Resource:
+              - !Sub 'arn:aws:events::${AWS::AccountId}:rule/${ProjectName}-${Stage}-*'
+  Why82BackendDeployPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - 's3:CreateBucket'
+            Resource:
+              - !Sub 'arn:aws:s3:::${ProjectName}-${Stage}'
   CiUser:
     Type: AWS::IAM::User
     Properties:
-      Policies:
-        - PolicyName:
-            Fn::Join:
-              - '-'
-              -
-                - Ref: ProjectName
-                - cipolicy
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Resource: '*'
-                Action:
-                  - 'cloudformation:Describe*'
-                  - 'cloudformation:List*'
-                  - 'cloudformation:Get*'
-                  - 'cloudformation:PreviewStackUpdate'
-                  - 'lambda:Get*'
-                  - 'lambda:List*'
-                  - 'ec2:DescribeSecurityGroups'
-                  - 'ec2:DescribeSubnets'
-                  - 's3:GetObject'
-                  - 's3:List*'
-                  - 'apigateway:GET'
-                  - 'iam:List*'
-                  - 'iam:Get*'
-                  - 'iam:Simulate*'
-                  - 'kinesis:Describe*'
-                  - 'kinesis:List*'
-                  - 'dynamodb:Describe*'
-                  - 'dynamodb:List*'
-                  - 'sqs:List*'
-              - Effect: Allow
-                Resource: '*'
-                Action:
-                  - lambda:CreateFunction
-              - Effect: Allow
-                Action: iam:PassRole
-                Resource:
-                  Fn::Join:
-                    - ':'
-                    - - arn
-                      - aws
-                      - iam
-                      - ''
-                      - Ref: 'AWS::AccountId'
-                      - Fn::Join:
-                        - '/'
-                        - - role
-                          - Fn::Join:
-                            - '-'
-                            -
-                              - Ref: ProjectName
-                              - 'prod*'
-              - Effect: Allow
-                Action: lambda:*
-                Resource:
-                  Fn::Join:
-                    - ':'
-                    - - arn
-                      - aws
-                      - lambda
-                      - Ref: 'AWS::Region'
-                      - Ref: 'AWS::AccountId'
-                      - function
-                      - Fn::Join:
-                        - '-'
-                        - - Ref: ProjectName
-                          - 'prod*'
-              - Effect: Allow
-                Action: cloudformation:*
-                Resource:
-                  Fn::Join:
-                    - ':'
-                    - - arn
-                      - aws
-                      - cloudformation
-                      - Ref: 'AWS::Region'
-                      - Ref: 'AWS::AccountId'
-                      - Fn::Join:
-                        - '/'
-                        - - stack
-                          - Fn::Join:
-                            - '-'
-                            -
-                              - Ref: ProjectName
-                              - 'prod*'
+      ManagedPolicyArns: # Max 10 policies
+        - !Ref ServelessDeployCFPolicy
+        - !Ref ServelessDeployS3Policy
+        - !Ref ServelessDeployLogsPolicy
+        - !Ref ServelessDeployIAMPolicy
+        - !Ref ServelessDeployLambdaPolicy
+        - !Ref Why82BackendDeployPolicy
   CiKey:
     Type: AWS::IAM::AccessKey
     Properties:
