@@ -2,7 +2,6 @@
   "name": "why82-backend",
   "version": "2018.1.1",
   "description": "",
-  "main": "handler.js",
   "scripts": {
     "deploy": "serverless deploy -v",
     "invoke": "serverless invoke -f save_stats -p events/save_stats.json -l",
@@ -13,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/colbywhite/why82.git"
+    "url": "git+https://github.com/colbywhite/why82-backend.git"
   },
   "author": "Colby M. White",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/colbywhite/why82/issues"
+    "url": "https://github.com/colbywhite/why82-backend/issues"
   },
-  "homepage": "https://github.com/colbywhite/why82#readme",
+  "homepage": "https://github.com/colbywhite/why82-backend#readme",
   "devDependencies": {
     "aws-cf-monitor": "^1.0.4",
     "chai": "^4.1.1",
