@@ -1,11 +1,12 @@
 {
   "name": "why82-backend",
-  "version": "2018.1.0",
+  "version": "2018.1.1",
   "description": "",
   "main": "handler.js",
   "scripts": {
     "deploy": "serverless deploy -v",
-    "save_stats": "serverless invoke -f save_stats -p events/save_stats.json -l",
+    "invoke": "serverless invoke -f save_stats -p events/save_stats.json -l",
+    "invoke:local": "serverless invoke local -f save_stats -p events/save_stats.json -l",
     "test:watch": "mocha -w",
     "ci": "cd aws && node create-ci.js",
     "test": "mocha"
