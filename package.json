@@ -1,6 +1,6 @@
 {
   "name": "why82-backend",
-  "version": "2018.1.1",
+  "version": "2018.2.0",
   "description": "",
   "scripts": {
     "deploy": "serverless deploy -v",

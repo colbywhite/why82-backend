@@ -36,13 +36,19 @@ provider:
               - - Ref: DataBucket
                 - '*'
   environment:
-    SEASON: 2017
+    SEASON: 2018
     MSF_USER: ${self:custom.mysportsfeeds.MSF_USER}
     MSF_PASS: ${self:custom.mysportsfeeds.MSF_PASS}
     DATA_BUCKET: ${self:service}-${opt:stage, self:provider.stage}
 functions:
   save_stats:
     handler: save_stats.save_stats
+    events:
+      # 10a UTC / 6a EDT / 5a EST / 3a PDT / 2a PST
+      - schedule: cron(0 10 18-31 OCT ? 2016)
+      - schedule: cron(0 10 * NOV,DEC ? 2016)
+      - schedule: cron(0 10 * JAN,FEB,MAR ? 2017)
+      - schedule: cron(0 10 1-11 APR ? 2017)
   latest_schedule:
     handler: latest.schedule
     events:
