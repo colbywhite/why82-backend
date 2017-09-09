@@ -42,6 +42,10 @@ module.exports.save_stats = (event, context, callback) => {
 
   let getLastSeasonStats = s3.readLatest(LAST_SEASON + '/', 'raw.stats')
     .then(JSON.parse)
+    .catch((err) => {
+      // if there's no stats for last season, that's fine. keep chugging.
+      return {}
+    })
 
   let getTeamStats = client.getTeamStats()
     .then(save_stats)
