@@ -6,6 +6,7 @@ const team_calc = require('./lib/team_calculator')
 const game_calc = require('./lib/game_calculator')
 const moment = require('moment-timezone')
 const SEASON = parseInt(process.env.SEASON)
+const LAST_SEASON = SEASON - 1
 const EASTERN_TIMEZONE = 'America/New_York'
 
 const buildFileName = (season, date, postfix) => {
@@ -38,10 +39,17 @@ module.exports.save_stats = (event, context, callback) => {
   const save_team_scores = s3.save_json.bind(s3, buildFileName(SEASON, date, 'team.scores'))
   const save_game_scores = s3.save_json.bind(s3, buildFileName(SEASON, date, 'game.scores'))
   const get_sked = client.getMultiDaySchedule.bind(client, date, 8)
-  let getTeamScores = client.getTeamStats()
+
+  let getLastSeasonStats = s3.readLatest(LAST_SEASON + '/', 'raw.stats')
+    .then(JSON.parse)
+
+  let getTeamStats = client.getTeamStats()
     .then(save_stats)
-    .then(team_calc.calc)
+
+  let getTeamScores = Promise.all([getTeamStats, getLastSeasonStats])
+    .then((results) => team_calc.calc(results[0], results[1]))
     .then(save_team_scores)
+
   let getSchedule = client.getMultiDaySchedule(date, 8)
     .then(save_sked)
 
