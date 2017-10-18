@@ -45,10 +45,10 @@ functions:
     handler: save_stats.save_stats
     events:
       # 10a UTC / 6a EDT / 5a EST / 3a PDT / 2a PST
-      - schedule: cron(0 10 18-31 OCT ? 2016)
-      - schedule: cron(0 10 * NOV,DEC ? 2016)
-      - schedule: cron(0 10 * JAN,FEB,MAR ? 2017)
-      - schedule: cron(0 10 1-11 APR ? 2017)
+      - schedule: cron(0 10 18-31 OCT ? 2017)
+      - schedule: cron(0 10 * NOV,DEC ? 2017)
+      - schedule: cron(0 10 * JAN,FEB,MAR ? 2018)
+      - schedule: cron(0 10 1-11 APR ? 2018)
   latest_schedule:
     handler: latest.schedule
     events:
