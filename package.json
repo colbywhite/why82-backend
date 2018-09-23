@@ -8,7 +8,7 @@
     "invoke": "serverless invoke -f save_stats -p events/save_stats.json -l",
     "invoke:local": "serverless invoke local -f save_stats -p events/save_stats.json -l",
     "test:watch": "mocha -w",
-    "ci": "cd aws && node create-ci.js",
+    "ciuser": "cd aws && node create-ci.js",
     "test": "mocha"
   },
   "repository": {
