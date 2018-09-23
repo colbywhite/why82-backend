@@ -38,7 +38,6 @@ module.exports.save_stats = (event, context, callback) => {
   const save_sked = s3.save_json.bind(s3, buildFileName(SEASON, date, 'raw.schedule'))
   const save_team_scores = s3.save_json.bind(s3, buildFileName(SEASON, date, 'team.scores'))
   const save_game_scores = s3.save_json.bind(s3, buildFileName(SEASON, date, 'game.scores'))
-  const get_sked = client.getMultiDaySchedule.bind(client, date, 8)
 
   let getLastSeasonStats = s3.readLatest(LAST_SEASON + '/', 'raw.stats')
     .then(JSON.parse)

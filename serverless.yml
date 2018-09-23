@@ -3,7 +3,7 @@ custom:
   mysportsfeeds: ${file(.mysportsfeeds.yml)}
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs8.10
   stage: dev
   iamRoleStatements:
     - Effect: Allow
@@ -36,7 +36,7 @@ provider:
               - - Ref: DataBucket
                 - '*'
   environment:
-    SEASON: 2018
+    SEASON: 2019
     MSF_USER: ${self:custom.mysportsfeeds.MSF_USER}
     MSF_PASS: ${self:custom.mysportsfeeds.MSF_PASS}
     DATA_BUCKET: ${self:service}-${opt:stage, self:provider.stage}
@@ -45,10 +45,10 @@ functions:
     handler: save_stats.save_stats
     events:
       # 10a UTC / 6a EDT / 5a EST / 3a PDT / 2a PST
-      - schedule: cron(0 10 18-31 OCT ? 2017)
-      - schedule: cron(0 10 * NOV,DEC ? 2017)
-      - schedule: cron(0 10 * JAN,FEB,MAR ? 2018)
-      - schedule: cron(0 10 1-11 APR ? 2018)
+      - schedule: cron(0 10 17-31 OCT ? 2018)
+      - schedule: cron(0 10 * NOV,DEC ? 2018)
+      - schedule: cron(0 10 * JAN,FEB,MAR ? 2019)
+      - schedule: cron(0 10 1-10 APR ? 2019)
   latest_schedule:
     handler: latest.schedule
     events:
